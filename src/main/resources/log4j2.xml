@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Appenders>
+        <!-- Console  -->
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} %-5level %logger{36} - %msg%n" />
+        </Console>
+
+        <!-- Rolling file with max size 100KB -->
+        <RollingFile 
+            name="SizeRollingFile" 
+            fileName="logs/app.log" 
+            filePattern="logs/app-%i.log.gz">
+
+            <!-- Format of the row -->
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} - %msg%n" />
+
+            <!-- When rolling: when file be 100KB -->
+            <Policies>
+                <SizeBasedTriggerPolicy size="100KB" />
+            </Policies>
+
+            <!-- How saved archives: max 20 files -->
+            <DefaultRolloverStrategy max="20" />
+        </RollingFile>
+    </Appenders>
+
+    <!-- Levels and routes -->
+    <Loggers>
+        <Root level="INFO">
+            <AppenderRef ref="Console" />
+            <AppenderRef ref="SizeRollingFile" />
+        </Root>
+    </Loggers>
+
+</Configuration>

@@ -1,3 +1,6 @@
 2025-10-28 09:45:56,379 INFO  com.example.HelloSLF4J - Hello, SLF4JJ + Logback
 2025-10-28 09:45:56,386 WARN  com.example.HelloSLF4J - Warning message (щось варте уваги)
 2025-10-28 09:45:56,386 ERROR com.example.HelloSLF4J - Error message (помилка)
+2025-10-28 10:27:39 INFO  com.example.HelloSLF4J - Hello, SLF4JJ + Logback
+2025-10-28 10:27:39 WARN  com.example.HelloSLF4J - Warning message (щось варте уваги)
+2025-10-28 10:27:39 ERROR com.example.HelloSLF4J - Error message (помилка)
